@@ -5,10 +5,13 @@
   <ItemGroup>
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="MathNet.Numerics" Version="3.20.0" />
-    <PackageReference Include="xunit.runner.console" Version="2.2.0" />
+    <PackageReference Include="xunit.runner.msbuild" Version="2.2.0" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pl31.ShapesNet\Pl31.ShapesNet.csproj" />
   </ItemGroup>
+  <Target Name="test">
+    <xunit Assemblies="tests.dll" />
+  </Target>
 </Project>
 
