@@ -45,12 +45,12 @@ namespace Tests
 		}
 
 		[Test ()]
+		[Ignore]
 		public void Test_ToPoint02 ()
 		{
 			// Test using line-line
 			throw new NotImplementedException ();
 		}
-
 
 	}
 }
