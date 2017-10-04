@@ -4,7 +4,7 @@ solution: source/Pl31.ShapesNet.sln
 mono:
   - latest
 script:
-  - xbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
+  - msbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
 #  - mono ./source/packages/NUnit.Runners.*/tools/nunit-console.exe ./source/tests/bin/Release/tests.dll
 
 #matrix:
