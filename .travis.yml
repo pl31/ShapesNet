@@ -3,7 +3,7 @@ solution: source/Pl31.ShapesNet.sln
 
 matrix:
   include:
-    - dotnet: latest
+    - dotnet: 2.0.0
       mono: none
     - mono: latest
       dotnet: none
