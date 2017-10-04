@@ -12,5 +12,5 @@ matrix:
 script:
   - msbuild /t:restore source/Pl31.ShapesNet.sln
   - msbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
-  - msbuild /t:test source/tests/tests.csproj
+  - msbuild /p:Configuration=Release /t:test source/tests/tests.csproj
 #  - mono ./source/packages/NUnit.Runners.*/tools/nunit-console.exe ./source/tests/bin/Release/tests.dll
