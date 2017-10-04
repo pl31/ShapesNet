@@ -1,0 +1,4 @@
+language: csharp
+solution: source/Pl31.ShapesNet/Pl31.ShapesNet.sln
+mono:
+- latest
