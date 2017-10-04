@@ -11,7 +11,7 @@
     <ProjectReference Include="..\Pl31.ShapesNet\Pl31.ShapesNet.csproj" />
   </ItemGroup>
   <Target Name="test">
-    <xunit Assemblies="tests.dll" />
+    <xunit Assemblies="${OutDir}/tests.dll" />
   </Target>
 </Project>
 
