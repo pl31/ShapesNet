@@ -6,7 +6,7 @@ matrix:
     - mono: none
       dotnet: latest   
     - mono: latest
-      dotnet:none
+      dotnet: none
 
 #mono:
 #  - latest
