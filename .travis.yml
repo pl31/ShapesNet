@@ -5,12 +5,14 @@ matrix:
   include:
     - dotnet: 2.0.0
       mono: none
-      env: DOTNETCORE=1
+      env: MSBUILD="dotnet msbuild"
     - mono: latest
       dotnet: none
+      env: MSBUILD="msbuild"
 
 script:
-  - msbuild /t:restore source/Pl31.ShapesNet.sln
-  - msbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
-  - msbuild /p:Configuration=Release /t:test source/tests/tests.csproj
-#  - mono ./source/packages/NUnit.Runners.*/tools/nunit-console.exe ./source/tests/bin/Release/tests.dll
+  - $MSBUILD /t:restore source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
+  - $MSBUILD /p:Configuration=Release source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
+  - $MSBUILD /t:restore source/tests/tests.csproj
+  - $MSBUILD /p:Configuration=Release source/tests/tests.csproj
+  - $MSBUILD /p:Configuration=Release /t:test source/tests/tests.csproj
