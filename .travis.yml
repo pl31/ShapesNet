@@ -1,14 +1,15 @@
 language: csharp
-solution: source/Pl31.ShapesNet.sln
+# solution: source/Pl31.ShapesNet.sln
 
 matrix:
   include:
     - dotnet: 2.0.0
       mono: none
+      env: DOTNETCORE=1
     - mono: latest
       dotnet: none
 
 script:
-  - msbuild /t:restore
+  - msbuild /t:restore source/Pl31.ShapesNet.sln
   - msbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
 #  - mono ./source/packages/NUnit.Runners.*/tools/nunit-console.exe ./source/tests/bin/Release/tests.dll
