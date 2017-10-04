@@ -1,15 +1,15 @@
 language: csharp
 solution: source/Pl31.ShapesNet.sln
 
-matrix:
-  include:
-    - dotnet: 2.0.0
-      mono: none
-    - mono: latest
-      dotnet: none
+mono:
+  - latest
+script:
+  - xbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
+  - mono ./source/packages/NUnit.Runners.*/tools/nunit-console.exe ./source/tests/bin/Release/tests.dll
 
-#mono:
-#  - latest
-#script:
-#  - xbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
-#  - mono ./source/packages/NUnit.Runners.*/tools/nunit-console.exe ./source/tests/bin/Release/tests.dll
+#matrix:
+#  include:
+#    - dotnet: 2.0.0
+#      mono: none
+#    - mono: latest
+#      dotnet: none
