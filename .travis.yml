@@ -5,14 +5,18 @@ matrix:
   include:
     - dotnet: 2.0.0
       mono: none
-      env: MSBUILD="dotnet msbuild"
+      env:
+        - MSBUILD="dotnet msbuild"
+        - TARGET="netcoreapp2.0"
     - mono: latest
       dotnet: none
-      env: MSBUILD="msbuild"
+      env: 
+        - MSBUILD="msbuild"
+        - TARGET="net462"
 
 script:
-  - $MSBUILD /t:restore source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
-  - $MSBUILD /p:Configuration=Release source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
-  - $MSBUILD /t:restore source/tests/tests.csproj
-  - $MSBUILD /p:Configuration=Release source/tests/tests.csproj
-  - $MSBUILD /p:Configuration=Release /t:test source/tests/tests.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET /t:restore source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET /t:restore source/tests/tests.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET source/tests/tests.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET /t:test source/tests/tests.csproj
