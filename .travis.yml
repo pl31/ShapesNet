@@ -5,7 +5,7 @@ mono:
   - latest
 script:
   - xbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
-  - mono ./source/packages/NUnit.Runners.*/tools/nunit-console.exe ./source/tests/bin/Release/tests.dll
+#  - mono ./source/packages/NUnit.Runners.*/tools/nunit-console.exe ./source/tests/bin/Release/tests.dll
 
 #matrix:
 #  include:
