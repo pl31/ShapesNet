@@ -5,7 +5,10 @@
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DocumentationFile>bin\Debug\net45\Pl31.ShapesNet.xml</DocumentationFile>
   </PropertyGroup>
-  <ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'netcoreapp2.0'>
+    <PackageReference Include="MathNet.Numerics.Core" Version="3.17.0" />
+  </ItemGroup>
+  <ItemGroup Condition="'$(TargetFramework)' == 'net461'>
     <PackageReference Include="MathNet.Numerics" Version="3.20.0" />
   </ItemGroup>
 </Project>
