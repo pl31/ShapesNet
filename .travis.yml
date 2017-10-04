@@ -15,8 +15,8 @@ matrix:
         - TARGET="net462"
 
 script:
-  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET /t:restore source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
-  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
-  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET /t:restore source/tests/tests.csproj
-  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET source/tests/tests.csproj
-  - $MSBUILD /p:Configuration=Release;TargetFramework=$TARGET /t:test source/tests/tests.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET /t:restore source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET /t:restore source/tests/tests.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET source/tests/tests.csproj
+  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET /t:test source/tests/tests.csproj
