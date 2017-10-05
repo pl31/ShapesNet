@@ -1,32 +1,10 @@
 language: csharp
 # solution: source/Pl31.ShapesNet.sln
 
-dotnet: 2.0.0
 mono: latest
+dotnet: 2.0.0
 
 script:
-  - msbuild /p:Configuration=Release /t:restore source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
-  - msbuild /p:Configuration=Release /t:restore source/tests/tests.csproj
-  - msbuild /p:Configuration=Release source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
-  - msbuild /p:Configuration=Release source/tests/tests.csproj
+  - msbuild /p:Configuration=Release /t:restore source/Pl31.ShapesNet.sln
+  - msbuild /p:Configuration=Release source/Pl31.ShapesNet.sln
   - msbuild /p:Configuration=Release /t:test source/tests/tests.csproj
-
-#matrix:
-#  include:
-#    - dotnet: 2.0.0
-#      mono: none
-#      env:
-#        - MSBUILD="dotnet msbuild"
-#        - TARGET="netcoreapp2.0"
-#    - mono: latest
-#      dotnet: none
-#      env: 
-#        - MSBUILD="msbuild"
-#        - TARGET="net462"
-
-#script:
-#  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET /t:restore source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
-#  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET source/Pl31.ShapesNet/Pl31.ShapesNet.csproj
-#  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET /t:restore source/tests/tests.csproj
-#  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET source/tests/tests.csproj
-#  - $MSBUILD /p:Configuration=Release;TargetFrameworks=$TARGET /t:test source/tests/tests.csproj
