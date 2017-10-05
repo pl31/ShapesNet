@@ -2,7 +2,7 @@ language: csharp
 # solution: source/Pl31.ShapesNet.sln
 
 mono: latest
-dotnet: 2.0.0
+# dotnet: 2.0.0
 
 script:
   - msbuild /p:Configuration=Release /t:restore source/Pl31.ShapesNet.sln
