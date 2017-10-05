@@ -1,6 +1,6 @@
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
-    <TargetFrameworks>netcoreapp2.0;net462</TargetFrameworks>
+    <TargetFrameworks>netcoreapp2.0;net461</TargetFrameworks>
   </PropertyGroup>
   <ItemGroup>
   </ItemGroup>
@@ -20,4 +20,3 @@
     <xunit Assemblies="$(OutDir)tests.dll" />
   </Target>
 </Project>
-
