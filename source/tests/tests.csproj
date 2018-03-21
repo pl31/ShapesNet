@@ -6,9 +6,13 @@
     <PackageReference Include="xunit" Version="2.2.0" />
     <PackageReference Include="MathNet.Numerics" Version="3.20.0" />
     <PackageReference Include="xunit.runner.console" Version="2.3.1" />
+    <PackageReference Include="xunit.runner.msbuild" Version="2.3.1" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Pl31.ShapesNet\Pl31.ShapesNet.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Homogeneous2D\Solver\" />
   </ItemGroup>
   <Target Name="test">
     <xunit Assemblies="$(OutDir)tests.dll" />

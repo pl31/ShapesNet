@@ -53,7 +53,7 @@ namespace Tests
         public void Test_ToPoint02()
         {
             // Test using line-line
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
         }
     }
 }

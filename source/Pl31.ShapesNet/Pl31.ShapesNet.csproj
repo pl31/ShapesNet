@@ -8,4 +8,12 @@
   <ItemGroup>
     <PackageReference Include="MathNet.Numerics" Version="3.20.0" />
   </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Homogeneous2D\Solver\" />
+    <Folder Include="Solver\" />
+    <Folder Include="Entities\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="Homogeneous2D\Solver\Solver.cs" />
+  </ItemGroup>
 </Project>
