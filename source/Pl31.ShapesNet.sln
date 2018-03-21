@@ -1,6 +1,6 @@
 
-Microsoft Visual Studio Solution File, Format Version 15.00
-# Visual Studio 2017
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Pl31.ShapesNet", "Pl31.ShapesNet\Pl31.ShapesNet.csproj", "{3149ADEA-57DF-46CF-8C6A-862E2E5DEC80}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{8F01C0C1-4FAE-4320-B51F-EA712A0A46E1}"
